@@ -1,6 +1,6 @@
 'use client'; // Still useful if any client-side interactions are added later
 
-import React, { useState } from 'react';
+import React from 'react';
 import LiveTime from './components/LiveTime'; // Added LiveTime import
 // Removed imports for LiveTime, ClickToReveal, CardFront, CardBack as they are not used in the new design
 // Will add LiveTime back if we implement the clock
@@ -49,19 +49,11 @@ const socialLinks = [
   { id: 'github', href: 'https://github.com/raagakarumanchi', label: 'github', isExternal: true },
   { id: 'linkedin', href: 'https://linkedin.com/in/raagakarumanchi', label: 'linkedin', isExternal: true },
   { id: 'instagram', href: 'https://instagram.com/raagakarumanchi', label: 'instagram', isExternal: true },
+  { id: 'substack', href: 'https://raagak.substack.com/', label: 'substack', isExternal: true },
   { id: 'lists', href: '#favorites', label: 'lists', isExternal: false },
 ];
 
 export default function Home() {
-  const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
-
-  const toggleItem = (id: string) => {
-    setExpandedItems(prev => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
-
   const today = new Date();
   const dateString = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -78,7 +70,7 @@ export default function Home() {
           </p>
           <div className="space-y-3 text-base md:text-lg leading-relaxed text-[var(--foreground)]/90 animate-fadeIn">
             <p>
-              Second-year at Columbia studying Neuroscience.
+              studying neuroscience at columbia university.
             </p>
             <p>
               Founder & Executive Director of <a href="https://donateessentials.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]/70 transition-colors">Donate Essentials</a>, a 501(c)(3) nonprofit.
@@ -91,7 +83,7 @@ export default function Home() {
             </p>
           </div>
           <p className="mt-4 text-base text-[var(--foreground)]/80 animate-fadeIn">
-            Feel free to <a href="mailto:rk3373@barnard.edu" className="underline hover:text-[var(--foreground)] transition-colors">reach out to me</a>.
+            Feel free to <a href="mailto:rk3373@barnard.edu" className="underline hover:text-[var(--foreground)] transition-colors">reach out to me</a> <span role="img" aria-label="love letter emoji" className="inline-block">💌</span>.
           </p>
         </header>
 
@@ -116,27 +108,10 @@ export default function Home() {
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-6 animate-fadeIn transition-colors duration-200 hover:text-[var(--foreground)]">
             currently
           </h2>
-          <ul className="space-y-1 list-none">
+          <ul className="space-y-3 list-none">
             {currentlyItemsData.map((item) => (
-              <li key={item.id} className="text-base text-[var(--foreground)]/90 rounded-md transition-all duration-200 ease-in-out hover:bg-[var(--foreground)]/5">
-                <div 
-                  className={`flex items-center p-2 cursor-pointer hover:text-[var(--foreground)] ${item.details ? '' : 'pointer-events-none'}`}
-                  onClick={() => item.details && toggleItem(item.id)}
-                >
-                  <span className="mr-3 text-[var(--foreground)]/70">
-                    {item.details ? (expandedItems[item.id] ? '◦' : '•') : '•'}
-                  </span>
-                  <span>{item.text}</span>
-                </div>
-                {item.details && (
-                  <div 
-                    className={`pl-10 pr-2 pb-2 overflow-hidden transition-all duration-300 ease-in-out ${expandedItems[item.id] ? 'max-h-screen' : 'max-h-0'}`}
-                  >
-                    <p className="text-sm text-[var(--foreground)]/70">
-                      {item.details}
-                    </p>
-                  </div>
-                )}
+              <li key={item.id} className="text-base text-[var(--foreground)]/90 p-2 rounded-md transition-all duration-200 ease-in-out hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)]">
+                • {item.text}
               </li>
             ))}
           </ul>
@@ -147,27 +122,10 @@ export default function Home() {
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-6 animate-fadeIn transition-colors duration-200 hover:text-[var(--foreground)]">
             previously
           </h2>
-          <ul className="space-y-1 list-none">
+          <ul className="space-y-3 list-none">
             {previouslyItemsData.map((item) => (
-              <li key={item.id} className="text-base text-[var(--foreground)]/90 rounded-md transition-all duration-200 ease-in-out hover:bg-[var(--foreground)]/5">
-                <div 
-                  className={`flex items-center p-2 cursor-pointer hover:text-[var(--foreground)] ${item.details ? '' : 'pointer-events-none'}`}
-                  onClick={() => item.details && toggleItem(item.id)}
-                >
-                  <span className="mr-3 text-[var(--foreground)]/70">
-                    {item.details ? (expandedItems[item.id] ? '◦' : '•') : '•'}
-                  </span>
-                  <span>{item.text}</span>
-                </div>
-                {item.details && (
-                  <div 
-                    className={`pl-10 pr-2 pb-2 overflow-hidden transition-all duration-300 ease-in-out ${expandedItems[item.id] ? 'max-h-screen' : 'max-h-0'}`}
-                  >
-                    <p className="text-sm text-[var(--foreground)]/70">
-                      {item.details}
-                    </p>
-                  </div>
-                )}
+              <li key={item.id} className="text-base text-[var(--foreground)]/90 p-2 rounded-md transition-all duration-200 ease-in-out hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)]">
+                • {item.text}
               </li>
             ))}
           </ul>
