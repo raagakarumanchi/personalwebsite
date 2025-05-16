@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+// import ScrollToTopButton from "./components/ScrollToTopButton"; // Commented out
 
 export const metadata: Metadata = {
   title: "Raaga Karumanchi",
@@ -13,17 +14,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="text-white font-sans min-h-screen bg-[#311535]">
-        {/* Top Navigation */}
-        <nav className="w-full flex justify-center gap-6 md:gap-8 py-8 text-lg lowercase sticky top-0 z-50 bg-[#311535]">
+      <body className="font-sans min-h-screen">
+        {/* Top Navigation - Commented out to match new design 
+        <nav className="w-full flex justify-center gap-6 md:gap-8 py-8 text-lg lowercase sticky top-0 z-50 bg-[var(--background)]">
           <a href="#currently" className="px-3 py-2 rounded-md hover:bg-white/10 transition-colors duration-300">currently</a>
-          <a href="#hobbies" className="px-3 py-2 rounded-md hover:bg-white/10 transition-colors duration-300">hobbies</a>
+          <a href="#hobbies" className="px-3 py-2 rounded-md hover:bg-white/10 transition-colors duration-300">hobbies</a> 
           <a href="#experience" className="px-3 py-2 rounded-md hover:bg-white/10 transition-colors duration-300">experience</a>
           <a href="#photos" className="px-3 py-2 rounded-md hover:bg-white/10 transition-colors duration-300">photos</a>
         </nav>
-        <main className="flex flex-col items-center w-full px-4">
+        */}
+        <main className="w-full">
           {children}
         </main>
+        {/* <ScrollToTopButton /> */} {/* Commented out */}
       </body>
     </html>
   );

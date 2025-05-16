@@ -1,34 +1,21 @@
 @import "tailwindcss";
-@import '@fontsource/eb-garamond/400.css';
-@import '@fontsource/eb-garamond/700.css';
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/700.css';
+@import '@fontsource/eb-garamond/400.css';
+@import '@fontsource/eb-garamond/700.css';
+@import '@fontsource/dancing-script';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0A0710;
+  --foreground: #EAE6F0;
 }
 
 body {
-  @apply font-serif leading-relaxed text-lg;
+  @apply font-sans leading-relaxed text-lg text-[var(--foreground)] bg-[var(--background)];
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-serif font-bold;
+  @apply font-sans font-bold;
 }
 
 nav, .sidebar {
@@ -36,9 +23,35 @@ nav, .sidebar {
 }
 
 section {
-  @apply mb-16;
+  @apply mb-8;
 }
 
 * {
   box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari compatibility */
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
