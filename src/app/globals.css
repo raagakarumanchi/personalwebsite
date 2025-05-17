@@ -87,6 +87,26 @@ h1 {
   margin: 0 0 1rem;
   color: var(--text);
   letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+h1:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 5px 15px rgba(194, 178, 128, 0.3);
+}
+
+h1:hover::after {
+  content: '🪐';
+  position: absolute;
+  animation: orbitAnimation 2s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+@keyframes orbitAnimation {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-10px) rotate(10deg) scale(1.2); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
 }
 
 p.lead {
@@ -131,7 +151,18 @@ h2:hover::after {
   margin: 0 0 1.25rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  transition: var(--transition);
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  transform: translateX(10px);
+  background: var(--bg-secondary);
+  padding-left: 1rem;
+  border-radius: 8px;
+}
+
+.item:hover .item-number {
+  color: var(--accent);
 }
 
 .item-number {
@@ -206,9 +237,39 @@ h2:hover::after {
 }
 
 .social-link:hover {
-  background: var(--accent);
-  color: var(--bg);
-  transform: translateY(-2px);
+  transform: translateY(-5px) scale(1.05);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(194, 178, 128, 0.4); }
+  100% { box-shadow: 0 0 0 10px rgba(194, 178, 128, 0); }
+}
+
+/* Customized hover for different social icons */
+.social-link:nth-child(1):hover { /* GitHub */
+  background: #333;
+  color: white;
+}
+
+.social-link:nth-child(2):hover { /* LinkedIn */
+  background: #0077B5;
+  color: white;
+}
+
+.social-link:nth-child(3):hover { /* X */
+  background: #000;
+  color: white;
+}
+
+.social-link:nth-child(4):hover { /* Instagram */
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+}
+
+.social-link:nth-child(5):hover { /* Writing/Substack */
+  background: #FF6719;
+  color: white;
 }
 
 .social-link-text {
@@ -233,6 +294,13 @@ footer h3 {
   font-style: italic;
   font-size: 1.7rem;
   margin: 0 0 0.75rem;
+  transition: all 0.3s ease;
+}
+
+footer h3:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+  transform-origin: left;
 }
 
 /* Links */
@@ -381,8 +449,9 @@ a:not(.social-link):hover::after {
 }
 
 .photo-grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 24px rgba(190,158,255,0.18);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(194, 178, 128, 0.2);
+  z-index: 1;
 }
 
 .skills-grid {

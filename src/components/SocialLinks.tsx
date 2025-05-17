@@ -2,6 +2,7 @@
 
 import { Github, Linkedin, Twitter, Instagram, Mail, Pencil } from 'lucide-react';
 
+
 interface SocialLink {
   name: string;
   url: string;
@@ -36,7 +37,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'Writing',
-    url: 'https://raagakarumanchi.substack.com/',
+    url: 'https://raagak.substack.com/',
     icon: <Pencil size={20} />,
     label: 'Substack Writing'
   }

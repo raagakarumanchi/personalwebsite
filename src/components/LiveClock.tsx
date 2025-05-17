@@ -2,37 +2,34 @@
 
 import { useState, useEffect } from 'react';
 
-interface LiveClockProps {
-  timeZone: string;
-  className?: string;
-}
+const options = {
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true
+} as const;
 
-const LiveClock: React.FC<LiveClockProps> = ({ timeZone, className }) => {
-  const [time, setTime] = useState<string>('--:--:--');
+const LiveClock = () => {
+  const [time, setTime] = useState('');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const updateClock = () => {
-      const options: Intl.DateTimeFormatOptions = {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        timeZone: timeZone,
-        hour12: true, // Or false if you prefer 24-hour format
-      };
+    setMounted(true);
+    
+    // Set initial time
+    setTime(new Date().toLocaleTimeString('en-US', options));
+    
+    // Update time every second
+    const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString('en-US', options));
-    };
+    }, 1000);
 
-    updateClock(); // Initial call to display time immediately
-    const intervalId = setInterval(updateClock, 1000); // Update every second
+    return () => clearInterval(interval);
+  }, []);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
-  }, [timeZone]);
+  // Don't render anything until component is mounted on client
+  if (!mounted) return <span>Loading...</span>;
 
-  return (
-    <div className={className} style={{ color: 'var(--text)' }}>
-      {time}
-    </div>
-  );
+  return <span className="live-clock">{time}</span>;
 };
 
 export default LiveClock; 

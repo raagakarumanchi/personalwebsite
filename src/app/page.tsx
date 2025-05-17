@@ -1,16 +1,23 @@
 'use client';
 
-import { AnimatedBackground } from '../components/AnimatedBackground';
-import { ScrollProgress } from '../components/ScrollProgress';
-import { SocialLinks } from '../components/SocialLinks';
-import LiveClock from '../components/LiveClock';
+import { Suspense, lazy } from 'react';
 import Link from 'next/link';
+
+// Dynamic imports for client components
+const AnimatedBackground = lazy(() => import('../components/AnimatedBackground').then(mod => ({ default: mod.AnimatedBackground })));
+const ScrollProgress = lazy(() => import('../components/ScrollProgress').then(mod => ({ default: mod.ScrollProgress })));
+const SocialLinks = lazy(() => import('../components/SocialLinks').then(mod => ({ default: mod.SocialLinks })));
 
 export default function Home() {
   return (
     <>
-      <ScrollProgress />
-      <AnimatedBackground />
+      <Suspense fallback={null}>
+        <ScrollProgress />
+      </Suspense>
+      
+      <Suspense fallback={null}>
+        <AnimatedBackground />
+      </Suspense>
       
       <main className="animate-fade-in" style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
         <h1 style={{ textAlign: 'left' }}>hi! i'm raaga karumanchi 🪐</h1>
@@ -70,13 +77,14 @@ export default function Home() {
         <footer>
           <div>
             <h3>connect</h3>
-            <SocialLinks />
+            <Suspense fallback={<div>Loading social links...</div>}>
+              <SocialLinks />
+            </Suspense>
           </div>
           
           <div>
             <h3>location</h3>
             <p>New York City, NY</p>
-            <p>Barnard College of Columbia University</p>
             <p>San Francisco Bay Area, CA</p>
           </div>
 
@@ -86,7 +94,7 @@ export default function Home() {
               <a href="mailto:rk3373@barnard.edu">rk3373@barnard.edu</a>
             </p>
             <p className="text-sm opacity-75">
-              Last updated: {new Date().toLocaleDateString()}
+              Last updated: May 2024
             </p>
           </div>
         </footer>
