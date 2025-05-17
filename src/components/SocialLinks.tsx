@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Mail, Pencil } from 'lucide-react';
 
 interface SocialLink {
   name: string;
@@ -35,10 +35,10 @@ const socialLinks: SocialLink[] = [
     label: 'Instagram Profile'
   },
   {
-    name: 'Email',
-    url: 'mailto:rk3373@barnard.edu',
-    icon: <Mail size={20} />,
-    label: 'Send Email'
+    name: 'Writing',
+    url: 'https://raagakarumanchi.substack.com/',
+    icon: <Pencil size={20} />,
+    label: 'Substack Writing'
   }
 ];
 
