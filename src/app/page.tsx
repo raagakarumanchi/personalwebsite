@@ -27,13 +27,13 @@ export default function Home() {
       
       <motion.main
         className="animate-fade-in"
-        style={{ maxWidth: 900, margin: '0 auto', padding: '1.2rem 0.8rem 2rem', fontSize: '9pt' }}
+        style={{ maxWidth: 900, margin: '0 auto', padding: '1.2rem 0.8rem 2rem', fontSize: '10pt' }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
-          style={{ textAlign: 'left', fontSize: '14pt', marginBottom: '0.7rem' }}
+          style={{ textAlign: 'left', fontSize: '12pt', marginBottom: '0.7rem' }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -42,7 +42,7 @@ export default function Home() {
         </motion.h1>
         
         <motion.p
-          style={{ fontSize: '9pt', fontStyle: 'italic', marginBottom: '2rem' }}
+          style={{ fontSize: '10pt', fontStyle: 'italic', marginBottom: '2rem' }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
@@ -95,7 +95,7 @@ export default function Home() {
           <img src="/snowy_day.jpeg" alt="Snowy Day" style={{ width: '220px', height: '110px', objectFit: 'cover', borderRadius: '10px' }} />
         </div>
 
-        <footer style={{ zIndex: 1, position: 'relative' }}>
+        <footer style={{ zIndex: 1, position: 'relative', fontSize: '9pt' }}>
           <div>
             <h3>connect</h3>
             <Suspense fallback={<div>Loading social links...</div>}>
@@ -126,7 +126,7 @@ export default function Home() {
                   borderBottom: '2px solid var(--accent)',
                   paddingBottom: '2px',
                   fontWeight: 500,
-                  fontSize: '9pt',
+                  fontSize: '10pt',
                   transition: 'border-color 0.2s',
                 }}
                 onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--accent-hover)')}

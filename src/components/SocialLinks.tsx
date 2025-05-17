@@ -14,38 +14,38 @@ const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/raagakarumanchi',
-    icon: <Github size={20} />,
-    label: 'GitHub Profile'
+    icon: <Github size={10} />,
+    label: 'GitHub'
   },
   {
     name: 'LinkedIn',
     url: 'https://linkedin.com/in/raagakarumanchi',
-    icon: <Linkedin size={20} />,
-    label: 'LinkedIn Profile'
+    icon: <Linkedin size={10} />,
+    label: 'LinkedIn'
   },
   {
     name: 'X',
     url: 'https://x.com/raagakarumanchi',
-    icon: <Twitter size={20} />,
-    label: 'X Profile'
+    icon: <Twitter size={10} />,
+    label: 'X'
   },
   {
     name: 'Instagram',
     url: 'https://instagram.com/raagakarumanchi',
-    icon: <Instagram size={20} />,
-    label: 'Instagram Profile'
+    icon: <Instagram size={10} />,
+    label: 'Instagram'
   },
   {
     name: 'Writing',
     url: 'https://raagak.substack.com/',
-    icon: <Pencil size={20} />,
-    label: 'Substack Writing'
+    icon: <Pencil size={10} />,
+    label: 'Writing'
   }
 ];
 
 export const SocialLinks = () => {
   return (
-    <div className="social-links" style={{ fontSize: '9pt' }}>
+    <div className="social-links" style={{ fontSize: '10pt' }}>
       {socialLinks.map((link) => (
         <a
           key={link.name}
@@ -56,7 +56,6 @@ export const SocialLinks = () => {
           aria-label={link.label}
         >
           {link.icon}
-          <span className="social-link-text">{link.name}</span>
         </a>
       ))}
     </div>
