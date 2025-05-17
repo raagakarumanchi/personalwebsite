@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Settings, Palette, Moon, Sun, Type } from 'lucide-react';
+import { Settings, Palette, Type } from 'lucide-react';
 
 interface ThemeOption {
   name: string;

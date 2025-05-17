@@ -2,11 +2,7 @@
 
 import React from 'react';
 
-interface CardFrontProps {
-  // onClick: () => void; // To handle flip from parent
-}
-
-const CardFront: React.FC<CardFrontProps> = ({ /*onClick*/ }) => {
+const CardFront: React.FC = () => {
   return (
     <div 
       className="absolute inset-0 w-full h-full bg-[var(--background)] text-[var(--foreground)] rounded-lg flex flex-col items-center justify-center p-6 backface-hidden shadow-lg"

@@ -1,7 +1,6 @@
 'use client';
 
 import { Suspense, lazy } from 'react';
-import Link from 'next/link';
 
 // Dynamic imports for client components with named exports
 const AnimatedBackground = lazy(() => 
@@ -26,28 +25,28 @@ export default function Home() {
       </Suspense>
       
       <main className="animate-fade-in" style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
-        <h1 style={{ textAlign: 'left' }}>hi! i'm raaga karumanchi 🪐</h1>
+        <h1 style={{ textAlign: 'left' }}>hi! i&apos;m raaga karumanchi 🪐</h1>
         
         <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '2rem' }}>
-          twenty. i was born and raised in the san francisco bay area. i've lived in india, and nyc before i was 5. currently, i live in nyc. I like to sidequest and dive into rabbit holes. interested in health tech, global health, and neuroscience.
+          twenty. i was born and raised in the san francisco bay area. i&apos;ve lived in india, and nyc before i was 5. currently, i live in nyc. I like to sidequest and dive into rabbit holes. interested in health tech, global health, and neuroscience.
         </p>
         <div className="section-columns">
           <div>
             <h2>currently</h2>
             <ul>
-              <li className="item" id="currently-item-1">
+              <li className="item" id="currently-item-1-final">
                 <span className="item-number">01</span>
                 Founder &amp; Executive Director @ Donate Essentials
               </li>
-              <li className="item" id="currently-item-2">
+              <li className="item" id="currently-item-2-final">
                 <span className="item-number">02</span>
                 Student @ Barnard College
               </li>
-              <li className="item" id="currently-item-3">
+              <li className="item" id="currently-item-3-final">
                 <span className="item-number">03</span>
                 Research Assistant @ UCSF
               </li>
-              <li className="item" id="currently-item-4">
+              <li className="item" id="currently-item-4-final">
                 <span className="item-number">04</span>
                 Research Assistant @ Columbia University Medical Center
               </li>
@@ -66,7 +65,7 @@ export default function Home() {
               </li>
               <li className="item">
                 <span className="item-number">03</span>
-                Volunteer at Women's Health Clinic
+                Volunteer at Women&apos;s Health Clinic
               </li>
             </ul>
           </div>

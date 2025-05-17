@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Twitter, Instagram, Mail, Pencil } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Pencil } from 'lucide-react';
 
 
 interface SocialLink {

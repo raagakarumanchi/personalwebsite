@@ -5,11 +5,7 @@ import React from 'react';
 // import LiveTime from './LiveTime';
 // import ClickToReveal from './ClickToReveal';
 
-interface CardBackProps {
-  // onClick: () => void; // To handle flip from parent
-}
-
-const CardBack: React.FC<CardBackProps> = ({ /*onClick*/ }) => {
+const CardBack: React.FC = () => {
   // const currentDate = new Date().toLocaleDateString('en-US', {
   //   year: 'numeric', 
   //   month: 'long', 

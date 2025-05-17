@@ -362,7 +362,7 @@ a:not(.social-link):hover::after {
 
 @media (max-width: 600px) {
   .section-columns {
-    grid-width: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
