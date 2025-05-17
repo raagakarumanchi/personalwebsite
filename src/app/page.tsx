@@ -28,7 +28,7 @@ export default function Home() {
         <h1 style={{ textAlign: 'left' }}>hi! i&apos;m raaga karumanchi 🪐</h1>
         
         <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '2rem' }}>
-          twenty. i was born and raised in the san francisco bay area. i&apos;ve lived in india, and nyc before i was 5. currently, i live in nyc. I like to sidequest and dive into rabbit holes. interested in health tech, global health, and neuroscience.
+          Twenty. I was born and raised in the San Francisco Bay Area. Currently, I live in NYC. I enjoy exploring side quests and delving into rabbit holes. Interested in health tech, global health, and neuroscience.
         </p>
         <div className="section-columns">
           <div>
