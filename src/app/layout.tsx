@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 // import ScrollToTopButton from "./components/ScrollToTopButton"; // Commented out
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Raaga Karumanchi",
