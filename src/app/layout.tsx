@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/RK%20Square%20Pillow.png" />
+      </head>
       <body className="font-sans min-h-screen">
         {/* Top Navigation - Commented out to match new design 
         <nav className="w-full flex justify-center gap-6 md:gap-8 py-8 text-lg lowercase sticky top-0 z-50 bg-[var(--background)]">
