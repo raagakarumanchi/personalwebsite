@@ -30,9 +30,9 @@ export default function Vibes() {
         <h2 style={{ fontSize: '1rem', color: 'var(--accent)', marginBottom: '0.3rem' }}>fav quotes</h2>
         <ul style={{ marginLeft: '1.2rem' }}>
           <li>“take your work seriously, never yourself” - hubert humphrey</li>
-          <li>“speed is a feature" - paul graham</li>
-          <li>“if it's worth doing, it's worth doing well" - lord chesterfield</li>
-          <li>“courage is knowing what not to fear" — plato</li>
+          <li>“speed is a feature&quot; - paul graham</li>
+          <li>“if it&apos;s worth doing, it&apos;s worth doing well&quot; - lord chesterfield</li>
+          <li>“courage is knowing what not to fear&quot; — plato</li>
         </ul>
       </section>
 

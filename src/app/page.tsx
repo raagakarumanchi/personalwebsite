@@ -93,7 +93,6 @@ export default function Home() {
         <div className="photo-grid">
           <img src="/amusement_park.jpeg" alt="Amusement Park" style={{ width: '220px', height: '110px', objectFit: 'cover', borderRadius: '10px' }} />
           <img src="/snowy_day.jpeg" alt="Snowy Day" style={{ width: '220px', height: '110px', objectFit: 'cover', borderRadius: '10px' }} />
-          <img src="/baby_photo.jpeg" alt="Baby Photo" style={{ width: '220px', height: '110px', objectFit: 'cover', borderRadius: '10px' }} />
         </div>
 
         <footer style={{ zIndex: 1, position: 'relative' }}>
