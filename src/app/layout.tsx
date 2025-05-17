@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 // import ScrollToTopButton from "./components/ScrollToTopButton"; // Commented out
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: "Raaga Karumanchi",
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
         </main>
         {/* <ScrollToTopButton /> */} {/* Commented out */}
+        <Analytics />
       </body>
     </html>
   );
