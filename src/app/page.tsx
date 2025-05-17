@@ -35,19 +35,19 @@ export default function Home() {
           <div>
             <h2>currently</h2>
             <ul>
-              <li className="item">
+              <li className="item" id="currently-item-1">
                 <span className="item-number">01</span>
-                Founder & Executive Director @ Donate Essentials
+                Founder &amp; Executive Director @ Donate Essentials
               </li>
-              <li className="item">
+              <li className="item" id="currently-item-2">
                 <span className="item-number">02</span>
                 Student @ Barnard College
               </li>
-              <li className="item">
+              <li className="item" id="currently-item-3">
                 <span className="item-number">03</span>
                 Research Assistant @ UCSF
               </li>
-              <li className="item">
+              <li className="item" id="currently-item-4">
                 <span className="item-number">04</span>
                 Research Assistant @ Columbia University Medical Center
               </li>
