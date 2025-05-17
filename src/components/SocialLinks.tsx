@@ -45,7 +45,7 @@ const socialLinks: SocialLink[] = [
 
 export const SocialLinks = () => {
   return (
-    <div className="social-links">
+    <div className="social-links" style={{ fontSize: '9pt' }}>
       {socialLinks.map((link) => (
         <a
           key={link.name}

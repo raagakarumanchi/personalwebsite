@@ -24,15 +24,15 @@ export default function Home() {
         <AnimatedBackground />
       </Suspense>
       
-      <main className="animate-fade-in" style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
-        <h1 style={{ textAlign: 'left' }}>hi! i&apos;m raaga karumanchi 🪐</h1>
+      <main className="animate-fade-in" style={{ maxWidth: 900, margin: '0 auto', padding: '1.2rem 0.8rem 2rem', fontSize: '9pt' }}>
+        <h1 style={{ textAlign: 'left', fontSize: '2.5rem', marginBottom: '0.7rem' }}>hi! i&apos;m raaga karumanchi 🪐</h1>
         
-        <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '2rem' }}>
-          Twenty. I was born and raised in the San Francisco Bay Area. Currently, I live in NYC. I enjoy exploring side quests and delving into rabbit holes. Interested in health tech, global health, and neuroscience.
+        <p style={{ fontSize: '9pt', fontStyle: 'italic', marginBottom: '2rem' }}>
+          Twenty. I was born and raised in the San Francisco Bay Area. Currently, I live in NYC. I enjoy exploring side quests and delving into rabbit holes. Interested in health/biotech, global health, and neuroscience.
         </p>
-        <div className="section-columns">
+        <div className="section-columns" style={{ gap: '2rem', marginBottom: '1rem' }}>
           <div>
-            <h2>currently</h2>
+            <h2 style={{ marginBottom: '0.4rem' }}>currently</h2>
             <ul>
               <li className="item" id="currently-item-1-final">
                 <span className="item-number">01</span>
@@ -53,7 +53,7 @@ export default function Home() {
             </ul>
           </div>
           <div>
-            <h2>previously</h2>
+            <h2 style={{ marginBottom: '0.4rem' }}>previously</h2>
             <ul>
               <li className="item">
                 <span className="item-number">01</span>
@@ -71,12 +71,10 @@ export default function Home() {
           </div>
         </div>
 
-        <h2>photos</h2>
         <div className="photo-grid">
           <img src="/amusement_park.jpeg" alt="Amusement Park" />
           <img src="/snowy_day.jpeg" alt="Snowy Day" />
           <img src="/baby_photo.jpeg" alt="Baby Photo" />
-          <img src="/dad_and_me.jpeg" alt="Dad and Me" />
         </div>
 
         <footer>
@@ -100,6 +98,24 @@ export default function Home() {
             </p>
             <p className="text-sm opacity-75">
               Last updated: May 2024
+            </p>
+            <p style={{ marginTop: '1.2rem' }}>
+              <a
+                href="/vibes"
+                style={{
+                  color: 'var(--accent)',
+                  textDecoration: 'none',
+                  borderBottom: '2px solid var(--accent)',
+                  paddingBottom: '2px',
+                  fontWeight: 500,
+                  fontSize: '9pt',
+                  transition: 'border-color 0.2s',
+                }}
+                onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--accent-hover)')}
+                onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--accent)')}
+              >
+                favorites
+              </a>
             </p>
           </div>
         </footer>
