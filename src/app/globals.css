@@ -182,35 +182,6 @@ h2:hover::after {
   margin-top: 0;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition);
-  z-index: 100;
-  color: var(--text);
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.theme-icon {
-  transition: var(--transition);
-}
-
 /* Social Links */
 .social-links {
   display: flex;
@@ -393,11 +364,6 @@ a:not(.social-link):hover::after {
   main {
     padding: 1.5rem 1rem 3rem;
   }
-
-  .theme-toggle {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
 }
 
 /* Print Styles */
@@ -414,7 +380,6 @@ a:not(.social-link):hover::after {
     font-size: 12pt;
   }
 
-  .theme-toggle,
   .social-links {
     display: none;
   }
