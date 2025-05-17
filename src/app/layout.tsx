@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/RK%20Square%20Pillow.png" />
+        <link rel="icon" href="/faicon.ico" />
       </head>
       <body className="font-sans min-h-screen">
         {/* Top Navigation - Commented out to match new design 
