@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/faicon.ico" />
+        {/* Remove <link rel="icon" href="/faicon.ico" /> from <head> if present */}
       </head>
       <body className="font-sans min-h-screen">
         {/* Top Navigation - Commented out to match new design 

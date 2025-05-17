@@ -2,6 +2,8 @@
 
 import { Suspense, lazy } from 'react';
 import { motion } from "framer-motion";
+import Image from 'next/image';
+import Link from 'next/link';
 
 // Dynamic imports for client components with named exports
 const AnimatedBackground = lazy(() => 
@@ -90,9 +92,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="photo-grid">
-          <img src="/amusement_park.jpeg" alt="Amusement Park" style={{ width: '220px', height: '110px', objectFit: 'cover', borderRadius: '10px' }} />
-          <img src="/snowy_day.jpeg" alt="Snowy Day" style={{ width: '220px', height: '110px', objectFit: 'cover', borderRadius: '10px' }} />
+        <div style={{ maxWidth: '400px', margin: '0 auto' }}>
+          <div className="photo-grid">
+            <Image src="/amusement_park.jpeg" alt="Amusement Park" width={220} height={110} style={{ objectFit: 'cover', borderRadius: '10px' }} />
+            <Image src="/snowy_day.jpeg" alt="Snowy Day" width={220} height={110} style={{ objectFit: 'cover', borderRadius: '10px' }} />
+          </div>
         </div>
 
         <footer style={{ zIndex: 1, position: 'relative', fontSize: '9pt' }}>
@@ -118,7 +122,7 @@ export default function Home() {
               Last updated: May 2024
             </p>
             <p style={{ marginTop: '1.2rem' }}>
-              <a
+              <Link
                 href="/favorites"
                 style={{
                   color: 'var(--accent)',
@@ -133,7 +137,7 @@ export default function Home() {
                 onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--accent)')}
               >
                 favorites
-              </a>
+              </Link>
             </p>
           </div>
         </footer>
