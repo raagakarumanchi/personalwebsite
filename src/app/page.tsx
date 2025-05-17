@@ -41,7 +41,7 @@ export default function Home() {
               </li>
               <li className="item">
                 <span className="item-number">02</span>
-                Studying Neuroscience @ Barnard
+                Student @ Barnard College
               </li>
               <li className="item">
                 <span className="item-number">03</span>
