@@ -96,13 +96,6 @@ h1:hover {
   text-shadow: 0 5px 15px rgba(194, 178, 128, 0.3);
 }
 
-h1:hover::after {
-  content: '🪐';
-  position: absolute;
-  animation: orbitAnimation 2s ease-in-out infinite;
-  opacity: 0.7;
-}
-
 @keyframes orbitAnimation {
   0% { transform: translateY(0) rotate(0deg) scale(1); }
   50% { transform: translateY(-10px) rotate(10deg) scale(1.2); }

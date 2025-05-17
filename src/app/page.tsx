@@ -3,10 +3,16 @@
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
 
-// Dynamic imports for client components
-const AnimatedBackground = lazy(() => import('../components/AnimatedBackground').then(mod => ({ default: mod.AnimatedBackground })));
-const ScrollProgress = lazy(() => import('../components/ScrollProgress').then(mod => ({ default: mod.ScrollProgress })));
-const SocialLinks = lazy(() => import('../components/SocialLinks').then(mod => ({ default: mod.SocialLinks })));
+// Dynamic imports for client components with named exports
+const AnimatedBackground = lazy(() => 
+  import('../components/AnimatedBackground').then(mod => ({ default: mod.AnimatedBackground }))
+);
+const ScrollProgress = lazy(() => 
+  import('../components/ScrollProgress').then(mod => ({ default: mod.ScrollProgress }))
+);
+const SocialLinks = lazy(() => 
+  import('../components/SocialLinks').then(mod => ({ default: mod.SocialLinks }))
+);
 
 export default function Home() {
   return (
