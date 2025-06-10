@@ -4,6 +4,7 @@ import { Suspense, lazy } from 'react';
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from 'next/link';
+import { NYClock } from '../components/NYClock';
 
 // Dynamic imports for client components with named exports
 const AnimatedBackground = lazy(() => 
@@ -110,6 +111,7 @@ export default function Home() {
           <div>
             <h3>location</h3>
             <p>New York City, NY</p>
+            <NYClock />
             <p>San Francisco Bay Area, CA</p>
           </div>
 

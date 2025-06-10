@@ -29,10 +29,22 @@ export default function Vibes() {
       <section style={{ marginBottom: '0.7rem' }}>
         <h2 style={{ fontSize: '1rem', color: 'var(--accent)', marginBottom: '0.3rem' }}>fav quotes</h2>
         <ul style={{ marginLeft: '1.2rem' }}>
-          <li>“take your work seriously, never yourself” - hubert humphrey</li>
-          <li>“speed is a feature&quot; - paul graham</li>
-          <li>“if it&apos;s worth doing, it&apos;s worth doing well&quot; - lord chesterfield</li>
-          <li>“courage is knowing what not to fear&quot; — plato</li>
+          <li>"take your work seriously, never yourself" - hubert humphrey</li>
+          <li>"speed is a feature&quot; - paul graham</li>
+          <li>"if it&apos;s worth doing, it&apos;s worth doing well&quot; - lord chesterfield</li>
+          <li>"courage is knowing what not to fear&quot; — plato</li>
+        </ul>
+      </section>
+
+      <section style={{ marginBottom: '0.7rem' }}>
+        <h2 style={{ fontSize: '1rem', color: 'var(--accent)', marginBottom: '0.3rem' }}>inspirations ✨</h2>
+        <ul style={{ marginLeft: '1.2rem' }}>
+          <li><strong>rosalind franklin</strong> - pioneering x-ray crystallographer who discovered DNA's double helix structure</li>
+          <li><strong>malala yousafzai</strong> - nobel peace prize laureate and advocate for girls' education</li>
+          <li><strong>steve jobs</strong> - visionary entrepreneur who revolutionized technology and design</li>
+          <li><strong>fei-fei li</strong> - leading AI researcher and advocate for ethical artificial intelligence</li>
+          <li><strong>jacinda ardern</strong> - former prime minister of new zealand known for compassionate leadership</li>
+          <li><strong>atul gawande</strong> - surgeon, writer, and public health researcher improving healthcare systems</li>
         </ul>
       </section>
 
